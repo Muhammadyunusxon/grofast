@@ -6,7 +6,7 @@ import 'dart:convert';
 
 List<ProductModel?>? productModelFromJson(String str) => json.decode(str) == null ? [] : List<ProductModel?>.from(json.decode(str)!.map((x) => ProductModel.fromJson(x)));
 
-String productModelToJson(List<ProductModel?>? data) => json.encode(data == null ? [] : List<dynamic>.from(data!.map((x) => x!.toJson())));
+String productModelToJson(List<ProductModel?>? data) => json.encode(data == null ? [] : List<dynamic>.from(data.map((x) => x!.toJson())));
 
 class ProductModel {
   ProductModel({

@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../Style/style.dart';
 
@@ -14,7 +15,7 @@ class CustomImageNetwork extends StatelessWidget {
         required this.image,
         this.height = 120,
         this.width = 120,
-        this.radius = 16})
+        this.radius = 24})
       : super(key: key);
 
   @override
@@ -25,7 +26,7 @@ class CustomImageNetwork extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(radius),
         child: CachedNetworkImage(
-          fit: BoxFit.cover,
+          fit: BoxFit.contain,
           imageUrl: image ?? "",
           progressIndicatorBuilder: (context, text, DownloadProgress value) {
             return Container(

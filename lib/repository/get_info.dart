@@ -33,7 +33,7 @@ abstract class GetInfo {
 
   static Future<List<ProductModel?>?> getCategoriesProduct(String category) async {
     try {
-      final url = Uri.parse("https://fakestoreapi.com/products/category/${category}");
+      final url = Uri.parse("https://fakestoreapi.com/products/category/$category");
       final res = await http.get(url);
       return productModelFromJson(res.body);
     } catch (e) {
