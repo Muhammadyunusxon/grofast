@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grofast/Pages/Login%20and%20Register/LoginPage.dart';
 import 'package:grofast/Model/TourModel.dart';
 
 import '../HomePage/GeneralPage.dart';
