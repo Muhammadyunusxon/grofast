@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grofast/Pages/ProductTour/ProducTourPage.dart';
+import 'package:grofast/Pages/ProductTour/Onboarding.dart';
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({Key? key}) : super(key: key);
