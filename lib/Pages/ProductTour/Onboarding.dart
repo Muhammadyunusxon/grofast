@@ -13,19 +13,19 @@ class TourPage extends StatefulWidget {
 class _TourPageState extends State<TourPage> {
   List<TourModel> data = [
     TourModel(
-      image: "images/tour/tour1.png",
+      image: "assets/images/tour/tour1.png",
       title: "Fresh groceries to your doorstep!",
       description:
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
     ),
     TourModel(
-      image: "images/tour/tour2.png",
+      image: "assets/images/tour/tour2.png",
       title: "Shop your daily necessary!",
       description:
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.",
     ),
     TourModel(
-      image: "images/tour/tour3.jpg",
+      image: "assets/images/tour/tour3.jpg",
       title: "Fast Shipment to your home!",
       description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
@@ -236,7 +236,7 @@ class _TourPageState extends State<TourPage> {
                 InkWell(
                   onTap: () {
                     pageIndex==2?
-                        Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const GeneralPage(name: '',)))
+                        Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const GeneralPage()))
                         : pageIndex+=1;
                     _pageController.animateToPage(pageIndex, duration: const Duration(milliseconds: 600), curve: Curves.easeIn);
                     setState(() {

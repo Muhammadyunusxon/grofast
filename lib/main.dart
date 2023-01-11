@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:grofast/Pages/ProductTour/SplashScreen.dart';
+import 'package:grofast/Pages/HomePage/GeneralPage.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'Style/style.dart';
 
@@ -8,13 +8,14 @@ void main() {
   runApp(const MainPage());
 }
 
+
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: const Size(375, 812),
+        designSize: const Size(375, 8126),
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context, child) {
@@ -24,8 +25,8 @@ class MainPage extends StatelessWidget {
             ),
             child: MaterialApp(
                 debugShowCheckedModeBanner: false,
-                title: 'Pinance',
-                home: WelcomePage()),
+                title: 'GroFast',
+                home: GeneralPage()),
           );
         });
   }

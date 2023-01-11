@@ -16,10 +16,10 @@ class _RegisterPageState extends State<RegisterPage> {
   TextEditingController password = TextEditingController();
   bool _isHidden = true;
   List social = [
-    "images/icon/apple.png",
-    "images/icon/google.png",
-    "images/icon/twitter.png",
-    "images/icon/facebook.png",
+    "assets/images/icon/apple.png",
+    "assets/images/icon/google.png",
+    "assets/images/icon/twitter.png",
+    "assets/images/icon/facebook.png",
   ];
   bool emailEmpty = false;
   bool passwordEmpty = false;

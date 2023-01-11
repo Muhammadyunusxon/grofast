@@ -16,10 +16,10 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController password = TextEditingController();
   bool _isHidden = true;
   List social = [
-    "images/icon/apple.png",
-    "images/icon/google.png",
-    "images/icon/twitter.png",
-    "images/icon/facebook.png",
+    "assets/images/icon/apple.png",
+    "assets/images/icon/google.png",
+    "assets/images/icon/twitter.png",
+    "assets/images/icon/facebook.png",
   ];
   bool emailEmpty = false;
   bool passwordEmpty = false;
@@ -251,7 +251,7 @@ class _LoginPageState extends State<LoginPage> {
                       GestureDetector(
                         onTap: () {
                           email.text.isNotEmpty && password.text.isNotEmpty
-                              ? Navigator.of(context).push(MaterialPageRoute(builder: (_)=> GeneralPage(name: "name"),),)
+                              ? Navigator.of(context).push(MaterialPageRoute(builder: (_)=> GeneralPage(),),)
                               : email.text.isEmpty
                                   ? emailEmpty = true
                                   : passwordEmpty = true;

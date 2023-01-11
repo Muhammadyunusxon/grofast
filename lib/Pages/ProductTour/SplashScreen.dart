@@ -28,7 +28,7 @@ class _WelcomePageState extends State<WelcomePage> {
         );
       },
       child: Image.asset(
-        'images/tour/Welcome Screen.png',
+        'assets/images/tour/Welcome Screen.png',
         fit: BoxFit.cover,
       ),
     );
