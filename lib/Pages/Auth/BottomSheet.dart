@@ -78,7 +78,7 @@ class BottomSheets extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 32,),
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>GeneralPage(name: name),),);
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>GeneralPage(),),);
                   },
                   child: Container(
                     height: 52,
