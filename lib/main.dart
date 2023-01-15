@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:grofast/Components/state_widget.dart';
 import 'package:grofast/Pages/HomePage/GeneralPage.dart';
-import 'package:pull_to_refresh/pull_to_refresh.dart';
-import 'Style/style.dart';
+
 
 void main() {
   runApp(const MainPage());
@@ -19,14 +19,15 @@ class MainPage extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context, child) {
-          return RefreshConfiguration(
-            headerBuilder: () => const WaterDropMaterialHeader(
-              backgroundColor: Style.primaryColor,
+          return  StateWidget(
+            child: Builder(
+              builder: (context) {
+                return MaterialApp(
+                      debugShowCheckedModeBanner: false,
+                      title: 'GroFast',
+                      home: GeneralPage());
+              }
             ),
-            child: MaterialApp(
-                debugShowCheckedModeBanner: false,
-                title: 'GroFast',
-                home: GeneralPage()),
           );
         });
   }

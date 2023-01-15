@@ -24,5 +24,4 @@ abstract class LocalStore{
     store.setStringList('likes', list);
   }
 
-
 }

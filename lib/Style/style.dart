@@ -15,6 +15,9 @@ abstract class Style {
   static const DarkTextColor = Color(0xff194B38);
   static const transparent = Colors.transparent;
   static Color shimmerBase = Colors.grey.shade300;
+  static const shimmerColor = Color(0x6026AD71);
+  static const shimmerBaseColor = Color(0x44777777);
+  static const shimmerHighlightColor = Color(0x65FFFFFF);
 
 
 

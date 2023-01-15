@@ -42,6 +42,16 @@ abstract class GetInfo {
     return null;
   }
 
+  static Future<ProductModel?> geIDProduct(int id) async {
+    try {
+      final url = Uri.parse("https://fakestoreapi.com/products/$id");
+      final res = await http.get(url);
+      return ProductModel.fromJson(jsonDecode(res.body));
+    } catch (e) {
+      print(e);
+    }
+    return null;
+  }
 
 
 }

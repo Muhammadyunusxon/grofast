@@ -24,8 +24,7 @@ class _GridProductState extends State<GridProduct> {
     return Container(
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24), color: Style.bgProduct),
-      child: ListView(
-        physics: NeverScrollableScrollPhysics(),
+      child: Column(
         children: [
           Stack(
             children: [
@@ -40,19 +39,16 @@ class _GridProductState extends State<GridProduct> {
                   splashRadius: 15,
                   onPressed: () async {
                     widget.isLike = !widget.isLike;
-                    print(widget.isLike);
-                    print(MyInheritedWidget.of(context).favourites);
                     if (widget.isLike) {
                       await LocalStore.setLikes(widget.product?.id ?? 0);
-                      MyInheritedWidget.of(context)
+                      StateInheritedWidget.of(context)
                           .favourites
                           .add(widget.product?.id ?? 0);
                     } else {
                       await LocalStore.removeLikes(widget.product?.id ?? 0);
-                      MyInheritedWidget.of(context).favourites.removeWhere(
+                      StateInheritedWidget.of(context).favourites.removeWhere(
                               (element) => element == widget.product?.id);
                     }
-                    print(MyInheritedWidget.of(context).favourites);
                     setState(() {});
                   },
                   icon: widget.isLike
@@ -102,7 +98,8 @@ class _GridProductState extends State<GridProduct> {
               overflow: TextOverflow.ellipsis,
             ),
           ),
-          8.verticalSpace,
+          7.verticalSpace,
+          Spacer(),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
